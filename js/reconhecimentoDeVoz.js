@@ -10,7 +10,19 @@ recognition.addEventListener("end", () => {
   return recognition.start();
 });
 function onSpeak(evt) {
-  chute = evt.results[0][0].transcript;
+  let chute = evt.results[0][0].transcript
+    .replace("Menos ", "-")
+    .replace("zero", "0")
+    .replace("um", "1")
+    .replace("dois", "2")
+    .replace("três", "3")
+    .replace("quatro", "4")
+    .replace("cinco", "5")
+    .replace("seis", "6")
+    .replace("sete", "7")
+    .replace("oito", "8")
+    .replace("nove", "9")
+    .replace("dez", "10");
 
   exibeChuteNaTela(chute);
   verificaONumeroFalado(chute);
