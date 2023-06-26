@@ -1,3 +1,4 @@
+// função para verificar o número falado pelo usuário
 function verificaONumeroFalado(chute) {
   const numero = +chute;
 
@@ -19,6 +20,7 @@ function verificaONumeroFalado(chute) {
           <h3>O número secreto é: ${numeroSecreto}</h3>
           `;
   } else if (numero > numeroSecreto) {
+    // mostra se o número é maior ou menor que o número secreto
     elementoChute.innerHTML += `
     <div>
     O número secreto é menor <i class="fas fa-hand-point-down"></i>
@@ -32,9 +34,11 @@ function verificaONumeroFalado(chute) {
     `;
   }
 }
+// condições para verificar se o número é válido
 function chuteForInvalido(numero) {
   return Number.isNaN(numero);
 }
+// condições para verificar se o número está entre o menor e o maior valor
 function numeroForMaiorOuMenorQueValorPermitido(numero) {
   return numero > maiorValor || numero < menorValor;
 }
