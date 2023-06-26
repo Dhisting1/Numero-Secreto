@@ -43,3 +43,16 @@ h3{
     font-size: 3em;
     margin: 20px;
 }
+.btn{
+    padding: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: var(--secundary);
+    color: var(--font-color);
+    border: none;
+    transition: ease-in-out .3s;
+}
+.btn:hover{
+    background-color: var(--last-color);
+    color: var(--bg-color);
+}
