@@ -18,6 +18,8 @@ function verificaONumeroFalado(chute) {
     document.body.innerHTML = `
           <h2>Você acertou!</h2>
           <h3>O número secreto é: ${numeroSecreto}</h3>
+
+          <button class="btn" onclick="window.location.reload()">Jogar novamente</button>
           `;
   } else if (numero > numeroSecreto) {
     // mostra se o número é maior ou menor que o número secreto
