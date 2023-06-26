@@ -1,4 +1,5 @@
 const elementoChute = document.getElementById("chute");
+// api de reconhecimento de voz
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
