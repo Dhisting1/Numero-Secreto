@@ -12,7 +12,7 @@ recognition.addEventListener("end", () => {
 });
 function onSpeak(evt) {
   let chute = evt.results[0][0].transcript
-    .replace("Menos ", "-")
+    .replace("menos ", "-")
     .replace("zero", "0")
     .replace("um", "1")
     .replace("dois", "2")
@@ -27,8 +27,14 @@ function onSpeak(evt) {
 
   exibeChuteNaTela(chute);
   verificaONumeroFalado(chute);
+  if (
+    chute.toLowerCase() === "fim de jogo" ||
+    chute.toLowerCase() === "fim do jogo" ||
+    chute.toLowerCase() === "game over"
+  ) {
+    gameOver();
+  }
 }
-
 function exibeChuteNaTela(chute) {
   elementoChute.innerHTML = `
     <div>Você disse:</div>

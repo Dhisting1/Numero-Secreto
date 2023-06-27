@@ -44,3 +44,12 @@ function chuteForInvalido(numero) {
 function numeroForMaiorOuMenorQueValorPermitido(numero) {
   return numero > maiorValor || numero < menorValor;
 }
+
+function gameOver() {
+  recognition.stop();
+  document.body.style.backgroundColor = "var(--bg-fim-jogo)";
+  document.body.innerHTML = `
+  <h2 class='fimDeJogo'>Fim de Jogo!</h2>
+  <button class="btn-fim-jogo" onclick="window.location.reload()">Jogar novamente</button> 
+  `;
+}

@@ -7,6 +7,11 @@
     --primary: #1b6b93;
     --secundary: #4fc0d0;
     --last-color: #a2ff86;
+    /* Cores para tela Game Over  */
+    --bg-fim-jogo: #F24C3D;
+    --cl-text: #F2BE22;
+    --btn: #F29727;
+    --sobra: #22A699;
 }
 body{
     background-color: var(--bg-color);
@@ -19,7 +24,6 @@ body{
     justify-content: center;
     text-align: center;
     margin: 0;
-  
 }
 h1{
     font-size: 5em;
@@ -55,4 +59,22 @@ h3{
 .btn:hover{
     background-color: var(--last-color);
     color: var(--bg-color);
+}
+.fimDeJogo{
+    color: var(--cl-text);
+    padding-bottom: 2em;
+    font-weight: 600;
+}
+.btn-fim-jogo{
+    padding: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: var(--cl-text);
+    color: var(--font-color);
+    border: none;
+    transition: ease-in-out .3s;
+}
+.btn-fim-jogo:hover{
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
