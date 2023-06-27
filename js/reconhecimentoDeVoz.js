@@ -27,13 +27,6 @@ function onSpeak(evt) {
 
   exibeChuteNaTela(chute);
   verificaONumeroFalado(chute);
-  if (
-    chute.toLowerCase() === "fim de jogo" ||
-    chute.toLowerCase() === "fim do jogo" ||
-    chute.toLowerCase() === "game over"
-  ) {
-    gameOver();
-  }
 }
 function exibeChuteNaTela(chute) {
   elementoChute.innerHTML = `
