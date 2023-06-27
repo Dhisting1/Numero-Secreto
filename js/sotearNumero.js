@@ -8,7 +8,6 @@ const elementoMaiorValor = document.getElementById("maior-valor");
 elemetoMenorValor.innerHTML = menorValor;
 elementoMaiorValor.innerHTML = maiorValor;
 
-console.log(numeroSecreto);
 // gera um número aleatório entre 1 e 100
 function gerarNumeroAleatorio() {
   return parseInt(Math.random() * maiorValor + 1);
