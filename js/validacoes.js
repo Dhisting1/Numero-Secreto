@@ -3,8 +3,15 @@ function verificaONumeroFalado(chute) {
   const numero = +chute;
 
   if (chuteForInvalido(numero)) {
-    elementoChute.innerHTML += `<div>Valor inválido</div>`;
-    return;
+    if (
+      chute.toLowerCase() === "fim de jogo" ||
+      chute.toLowerCase() === "fim do jogo" ||
+      chute.toLowerCase() === "game over"
+    ) {
+      gameOver();
+    } else {
+      elementoChute.innerHTML += `<div>Valor inválido</div>`;
+    }
   }
   if (numeroForMaiorOuMenorQueValorPermitido(numero)) {
     elementoChute.innerHTML += `
